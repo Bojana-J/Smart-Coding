@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Belgrade</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="nav.css">
+
+<body>
+    <!-- NavBar -->
+    <div>
+        <nav>
+            <ul>
+                <li class='right'><a href="contact.html">Contact</a></li>
+                <li class='right'><a href="news.html">News</a></li>
+                <li class='right'><a href="about.html">About Belgrade</a></li>
+                <li class='right'><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Belgrade<br>The White City</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Official guide</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+            <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Places to visit</a>
+            <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tours</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Belgrade</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Belgrade</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Official guide.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="belgradePhotos/belgrade2.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Church of Saint Sava at night">
+                <img src="belgradePhotos/belgrade3.jpg" style="width:100%" onclick="onClick(this)" alt="The harbour">
+            </div>
+
+            <div class="w3-half">
+                <img src="belgradePhotos/belgrade5.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Church of Saint Sava during the day">
+                <img src="belgradePhotos/belgrade4.jpg" style="width:100%" onclick="onClick(this)" alt="Slavija Square">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>A multicultural city in perfect location!</p>
+            <p>Belgrade lies 116.75 metres (383.0 ft) above sea level and is located at the confluence of the Danube
+                and Sava rivers. The historical core of Belgrade, Kalemegdan, lies on the right banks of both rivers.
+                Since the 19th century, the city has been expanding to the south and east; after World War II, New
+                Belgrade was built on the left bank of the Sava river, connecting Belgrade with Zemun. Smaller, chiefly
+                residential communities across the Danube, like Krnjača, Kotež and Borča, also merged with the city,
+                while Pančevo, a heavily industrialised satellite city, remains a separate town. The city has an urban
+                area of 360 square kilometres (140 sq mi), while together with its metropolitan area it covers 3,223 km2
+                (1,244 sq mi). On the right bank of the Sava, central Belgrade has a hilly terrain, while the highest
+                point of Belgrade proper is Torlak hill at 303 m (994 ft). The mountains of Avala (511 m (1,677 ft)) and
+                Kosmaj (628 m (2,060 ft)) lie south of the city. Across the Sava and Danube, the land is mostly flat,
+                consisting of alluvial plains and loessial plateaus.
+            </p>
+        </div>
+
+        <!-- Places to visit -->
+        <div class="w3-container" id="designers" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Places to visit</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Belgrade tourist attractions are visited by thousands of visitor each months.</p>
+            <p>Most people would describe the Serbian capital as a city with a rich culture, monuments at every step and
+                a buzzing nightlife. But that’s not
+                even the half of it! To this day, this intriguing metropolis manages to surprise not only tourists, but
+                the people who spend every day walking its streets.
+            </p>
+            <p><b>Here are some of the best places to visit</b>:</p>
+        </div>
+
+        <!-- The Landmarks -->
+        <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="belgradePhotos/belgrade10.jpg" alt="Saint Sava" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Church of Saint Sava</h3>
+                        <p class="w3-opacity">Ortodox Monument</p>
+                        <p>It is one of the largest Eastern Orthodox church buildings and ranks among the largest church
+                            buildings in the world.</p>
+
+                        <p> The church is dedicated to Saint Sava, the founder of the Serbian Orthodox Church and an
+                            important figure in medieval Serbia. It is built on the Vračar plateau, on the location
+                            where his remains were burned in 1595 by Ottoman Grand Vizier Sinan Pasha.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="belgradePhotos/belgrade11.jpg" alt="Kalemegdan" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Kalemegdan</h3>
+                        <p class="w3-opacity">The old fortress</p>
+                        <p>Once Kalemegdan was a fortress (kale) and a field (megdan), and now it is one of the most
+                            important cultural-historic sites, a park and a playground, a lookout and a Zoo, a concert
+                            venue and so much more.</p>
+
+                        <p>In the 5th century, the Belgrade fortress was destroyed by the Huns and in the early Middle
+                            Ages saw an onslaught of Barbarian tribes, including the Slavs. A legend even says that
+                            Attila’s
+                            grave lies at the confluence the Danube and the Sava river, more precisely under the very
+                            fortress.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="belgradePhotos/belgrade13.jpg" alt="Knez Mihajlova" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Knez Mihajlova Street</h3>
+                        <p class="w3-opacity">The old famous street</p>
+                        <p>The White City was fought over countless times, destroyed and rebuild times over, and as a
+                            result emerged with a strong spirit which can be found in its architecture, landmarks, in
+                            its people and the overall way of life. The Knez Mihajlova street is a classic example of
+                            the strugle for freedom and uniqueness of architecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tours / Pricing Tables -->
+        <div class="w3-container" id="packages" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Tours</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>The best way to enjoy the city is on foot. We offer guided tours in 5 different languages. Come and join
+                us on this epic journey of discovering Belgrade</p>
+        </div>
+
+        <div class="w3-row-padding">
+            <div class="w3-half w3-margin-bottom">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                    <li class="w3-padding-16">3 landmarks</li>
+                    <li class="w3-padding-16">2 hours tour</li>
+                    <li class="w3-padding-16">Photography</li>
+                    <li class="w3-padding-16">20% discount on groups (5 or more) </li>
+                    <li class="w3-padding-16">Good deals</li>
+                    <li class="w3-padding-16">
+                        <h2>$ 19</h2>
+                        <span class="w3-opacity">per person</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w3-half">
+                <ul class="w3-ul w3-light-grey w3-center">
+                    <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+                    <li class="w3-padding-16">7 landmarks</li>
+                    <li class="w3-padding-16">5 hours tour</li>
+                    <li class="w3-padding-16">Photography</li>
+                    <li class="w3-padding-16">30% discount on groups (5 or more)</li>
+                    <li class="w3-padding-16">GREAT deals</li>
+                    <li class="w3-padding-16">
+                        <h2>$ 25</h2>
+                        <span class="w3-opacity">per person</span>
+                    </li>
+                    <li class="w3-light-grey w3-padding-24">
+                        <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p> Still interested in visiting Belgrade?! If you have any questions feel free to send us a message.
+                Fill out this form and we'll send you an answer as soon as possible. :) </p>
+            <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send
+                    Message</button>
+            </form>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+        <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+                target="_blank" class="w3-hover-opacity">w3.css</a></p>
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
